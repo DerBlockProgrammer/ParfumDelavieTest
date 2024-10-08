@@ -1,0 +1,283 @@
+body {
+    margin: 0;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    display: flex;
+    background-color: grey;
+    height: 100px;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 20px;
+}
+
+/* Stil für "Unsere Beratung" */
+.menu a:first-child {
+    border: 3px solid; /* Umrandung für "Unsere Beratung" */
+    border-radius: 20px; /* Abgerundete Ecken */
+    padding: 10px;
+    color: black;
+    background-color: white; /* Hintergrundfarbe */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.menu a:first-child:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+    text-decoration: underline;
+}
+
+/* Stil für die anderen Menü-Buttons ohne Umrandung */
+.menu a:not(:first-child) {
+    border: none; /* Keine Umrandung */
+    color: white; /* Textfarbe für andere Menü-Buttons */
+    padding: 10px; /* Gleiche Polsterung wie der Hauptbutton */
+    text-decoration: none; /* Keine Unterstreichung */
+}
+
+/* Stil für alle Links im Menü */
+.menu a {
+    text-decoration: none; /* Keine Unterstreichung */
+}
+.menu a:hover{
+    text-decoration: underline;
+
+}
+
+/* Übriger CSS bleibt unverändert */
+.überschrift p {
+    font-size: 12px;
+    margin-top: 0;
+}
+
+.überschrift h1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Hurricane', cursive;
+    color: aliceblue;
+}
+
+.picture img {
+    height: 500px;
+    border-radius: 100px;
+    margin-top: 150px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.picture img:hover {
+    transform: scale(1.05) rotateX(10deg);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.9);
+}
+
+.content1 {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.content1 p {
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: -webkit-center;
+    font-size: 20px;
+}
+
+h2 {
+    color: aliceblue;
+}
+
+.content2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.bekanntAus {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bekanntAus img {
+    height: 80px;
+    border-radius: 50px;
+    animation: slide 3s ease-in-out infinite; /* Hinzufügen der Bewegung */
+}
+
+.details {
+    display: flex;
+    height: 80px;
+    background-color: grey;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.details a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.details a:hover {
+    text-decoration: underline;
+}
+
+.delavie {
+    padding-left: 800px;
+    font-size: 20px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.map-container {
+    width: 100%;
+    overflow: hidden; /* Verhindert, dass die Karte aus dem Container herausragt */
+    margin-top: 20px;
+    color: aliceblue;
+}
+
+.map-container iframe {
+    width: 200%; /* Breiter als der sichtbare Bereich für die Bewegung */
+    height: 450px;
+    border: 0;
+    transform: translateX(-20%); /* Verschiebt die Karte nach links */
+}
+
+.socialMedia img {
+    height: 30px;
+    width: 30px;
+    
+}
+.footer-links {
+    
+    gap: 20px; /* Abstand zwischen den Links */
+    flex-direction: row; /* Stellt sicher, dass die Links in einer Zeile sind */
+    align-items: center; /* Vertikale Ausrichtung */
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0; /* Kein zusätzlicher Abstand */
+    transition: color 0.3s;
+    font-size: 12px
+}
+
+.footer-links a:hover {
+    color: aliceblue;
+    text-decoration: underline;
+    
+}
+
+.footer-container {
+   
+    justify-content: space-between; /* Abstand zwischen rechtlichen Links und Social Media */
+    align-items: center; /* Vertikale Ausrichtung */
+}
+
+footer {
+    background-color: grey;
+    padding: 10px 20px; /* Innenabstand, der schmaler von unten ist */
+    color: white;
+}
+
+.footer-bottom {
+    
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer-bottom p {
+    
+    margin: 0;
+    font-size: 12px; /* Optional kleinere Schriftgröße */
+}
+
+@media(max-width: 1201px){
+    .content1 img{
+        height: 250px;
+    }
+    .content1 p{
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        margin-top: 150px;
+    }
+}
+@media(max-width: 870px){
+    .bekanntAus img{
+height: 30px;
+animation: none;
+    }
+}
+@media(max-width: 660px){
+    .content1 img{
+height: 20px;
+animation: none;
+    }
+    .content1 p{
+        font-size: 10px;
+    }
+}
+@media(max-width: 350px){
+    .content1 img{
+height: 30px;
+animation: none;
+box-shadow: none;
+    }
+    .content1 p{
+        font-size: 9px;
+    }
+    .überschrift h1{
+        font-size: 15px;
+    }
+    .menu a:first-child{
+        height: 5px;
+        font-size: 10px;
+        
+    }
+
+    .menu a:not(:first-child){
+        font-size: 10px;
+    }
+    .bekanntAus img{
+        height: 17px;
+    }
+    
+    .map-container{
+        height: auto;
+    }
+    .footer-links a{
+        font-size: 10px;
+    }
+}
